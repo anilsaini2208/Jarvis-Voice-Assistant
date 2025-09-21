@@ -4,8 +4,6 @@ import webbrowser
 import musiclibrary
 import openai
 
-openai.api_key = "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"    
-
 recognizer = sr.Recognizer() #first we have created a recognizer object where whatever we speak it will recognize
 ttsx = pyttsx3.init() #always use parathesis and then we initializepyttsx
 
