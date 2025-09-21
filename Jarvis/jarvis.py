@@ -32,21 +32,6 @@ def process_command(c):
         song = c.lower().split(" ") [1]
         link = musiclibrary.music[song] # we will always use brackets to get access to dictionary
         webbrowser.open(link)
-    
-    else:
-        try:
-            response = openai.chat.completions.create(
-                model="gpt-3.5-turbo",
-                messages=[{"role": "user", "content": c}],
-                temperature=0.7
-            )
-            answer = response.choices[0].message.content
-            speak(answer)
-
-        except Exception as e:
-            speak("Sorry, I could not process that.")
-            print(f"OpenAI error: {e}")
-
 
 
 speak("initializing")
